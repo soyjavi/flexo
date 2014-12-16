@@ -1,22 +1,67 @@
+aside {
+}
+  aside header, ul, footer {
+    padding: 1rem 1.5rem;
+  }
+  aside header {
+    background-color: rgba(0,0,0,0.25);
+    font-size: 125%;
+    font-weight: bold;
+  }
+  aside a {
+    text-decoration: none;
+    color: #007FFF;
+  }
+    aside a:hover {
+      color: #fff;
+    }
+  aside footer {
+    font-size: 75%;
+    background-color: rgba(255,255,255,0.025);
+  }
+    aside footer  {
+      line-height: 2rem;
+    }
+    aside footer img {
+      height: 2rem;
+      width: 2rem;
+      margin-right: .5rem;
+      border-radius: 50%;
+    }
+    aside footer a {
+      margin-left: .5rem;
+    }
+
+
 .landing {
   margin: 4rem 0;
 }
   .landing > h1 {
     font-size: 16rem;
   }
+  .landing .button {
+    font-size: 1.25rem;
+  }
+
+  .landing pre {
+    width: 30%;
+    margin: 0 auto;
+  }
+
 
 .container {
   padding: 4rem 0
 }
 
 .row > h6 {
+  padding-top: 2rem;
+  font-size: 125%;
   font-weight: bold;
 }
 
-aside {
-  padding: 1.5rem;
-}
-a {
-  text-decoration: none;
-  color: #007FFF;
+[data-column].bck.theme {
+  padding: 0.5rem 1rem;
+  font-size: 75%;
+  border-radius: 2px;
+  color: rgba(255,255,255,0.75);
 }

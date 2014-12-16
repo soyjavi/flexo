@@ -12,36 +12,30 @@
 </head>
 <body data-flex="horizontal grow-children">
 
-  <aside class="bck theme-dark color white" data-column="2">
-    <h5><strong>Features</strong></h5>
-    <ul data-flex="vertical" class="none">
-      <strong>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#grid">The Grid</a></li>
-        <li><a href="#">Simple Syntax</a></li>
-        <li><a href="#">Offsets</a></li>
-        <li><a href="#typography">Typography</a></li>
-        <li><a href="#button">Buttons</a></li>
-        <li><a href="#table">Table</a></li>
-        <li><a href="#list">List</a></li>
-        <li><a href="#form">Form</a></li>
-      </strong>
-    </ul>
-    <ul data-flex="horizontal wrap grow-children">
-      <li><a href="#">Responsive</a></li>
-      <li><a href="#">Fluid</a></li>
+  <aside class="bck theme-dark color white" data-column="2" data-flex="vertical">
+    <header>Features</header>
+    <ul data-flex="vertical" class="none" data-flex-grow="max">
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#grid">The Grid</a></li>
       <li><a href="#">Simple Syntax</a></li>
       <li><a href="#">Offsets</a></li>
-      <li><a href="#">Auto width</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#button">Buttons</a></li>
+      <li><a href="#table">Table</a></li>
+      <li><a href="#list">List</a></li>
+      <li><a href="#form">Form</a></li>
     </ul>
+    <footer data-flex="horizontal center" data-flex-grow="min">
+      <img src="http://cdn.tapquo.com/photos/soyjavi.jpg" />Crafted by <a href="http://soyjavi.com" target="_blank">@soyjavi</a></footer>
   </aside>
 
   <article class="scroll">
     <div class="align center landing">
       <h1><strong>Flexo</strong></h1>
       <h5>A dead simple, responsive & <strong class="color theme">flexible</strong> boilerplate.</h5>
-      <a href="/" class="button">Download</a>
-      <a href="/" class="button">Github</a>
+      <a href="https://github.com/soyjavi/flexo/releases" class="button">Download</a>
+      <a href="https://github.com/soyjavi/flexo" class="button">Github</a>
+      <pre><code>bower install flexo</code></pre>
     </div>
 
     <div class="bck dark">
@@ -111,7 +105,6 @@
           <div class="bck theme" data-column="12">12</div>
         </section>
         <!-- OFFSET -------------------------------------------------------- -->
-
         <section class="row">
           <div class="bck theme" data-column="11" data-offset="1">11 - 1</div>
         </section>

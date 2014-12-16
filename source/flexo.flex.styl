@@ -63,6 +63,9 @@ align-self()
 [data-flex^="horizontal"]
   flex-direction row
 
+[data-flex*="center"]
+  justify-content center
+
 [data-flex^="vertical"]
   flex-direction column
 
@@ -70,6 +73,12 @@ align-self()
 [data-flex*="grow-children"]
   > *:not([data-column])
     flex-grow 1
+
+[data-flex-grow="min"]
+  flex-grow 0
+
+[data-flex-grow="max"]
+  flex-grow 2
 
 [data-flex*="wrap"]
   flex-wrap wrap
