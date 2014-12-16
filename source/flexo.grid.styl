@@ -1,0 +1,73 @@
+[data-column]
+  float                 : left
+  width                 : 100%
+  box-sizing            : border-box
+
+// -- Larger than mobile -------------------------------------------------------
+@media (min-width: 400px) {}
+
+// -- Larger than phablet (also point when grid becomes active) ----------------
+@media (min-width: 550px)
+  [data-column]
+    background-color: #ddd
+    &:not(:first-child):not([data-column="12"])
+      margin-left: 4%
+  // -- Column Size ------------------------------------------------------------
+  [data-column="1"]
+    width: 4.66666666667%
+  [data-column="2"]
+    width: 13.3333333333%
+  [data-column="3"]
+    width: 22%
+  [data-column="4"]
+    width: 30.6666666667%
+  [data-column="5"]
+    width: 39.3333333333%
+  [data-column="6"]
+    width: 48%
+  [data-column="7"]
+    width: 56.6666666667%
+  [data-column="8"]
+    width: 65.3333333333%
+  [data-column="9"]
+    width: 74.0%
+  [data-column="10"]
+    width: 82.6666666667%
+  [data-column="11"]
+    width: 91.3333333333%
+  [data-column="12"]
+    width: 100%
+  // -- Offset Size ------------------------------------------------------------
+  [data-offset="1"]
+    margin-left: 8.66666666667%
+  [data-offset="2"]
+    margin-left: 17.3333333333%
+  [data-offset="3"]
+    margin-left: 26%
+  [data-offset="4"]
+    margin-left: 34.6666666667%
+  [data-offset="5"]
+    margin-left: 43.3333333333%
+  [data-offset="6"]
+    margin-left: 52%
+  [data-offset="7"]
+    margin-left: 60.6666666667%
+  [data-offset="8"]
+    margin-left: 69.3333333333%
+  [data-offset="9"]
+    margin-left: 78.0%
+  [data-offset="10"]
+    margin-left: 86.6666666667%
+  [data-offset="11"]
+    margin-left: 95.3333333333%
+
+// -- Larger than phablet ------------------------------------------------------
+@media (min-width: 750px) {}
+
+// -- Larger than desktop ------------------------------------------------------
+@media (min-width: 1000px) {}
+
+// -- Larger than Desktop HD ---------------------------------------------------
+@media (min-width: 1200px)
+  .container
+    max-width     : 1200px
