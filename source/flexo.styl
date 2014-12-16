@@ -1,0 +1,41 @@
+// -- CONSTANTS ----------------------------------------------------------------
+FONT-SIZE           = 16px
+FONT-FAMILY         = "Raleway"
+UNIT                = 1rem
+
+// -- BASE ---------------------------------------------------------------------
+html
+  font-size         : 62.5%
+
+body
+  font-size         : 1.5em
+  line-height       : 1.6
+  font-weight       : 400
+  font-family       : "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+  color             : #222
+
+.container
+  position          : relative
+  width             : 80%
+  max-width         : 960px
+  margin            : 0 auto
+  padding           : 0
+
+.row
+  display           : block
+  margin-bottom     : 1.5rem
+
+.container, .row
+  &:after
+    content         : ""
+    display         : table
+    clear           : both
+
+button, .button
+  margin-bottom     : 1rem
+
+input, textarea, select, fieldset
+  margin-bottom     : 1.5rem
+
+pre, blockquote, form, dl, figure, table, p, ul, ol, form
+  margin-bottom     : 2.5rem
