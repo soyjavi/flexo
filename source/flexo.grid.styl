@@ -12,6 +12,7 @@
 // -- Larger than phablet (also point when grid becomes active) ----------------
 @media (min-width: 550px)
   [data-column]
+    background-color: BACKGROUND
     &:not(:first-child):not([data-column="12"])
       margin-left       : 4%
   // -- Column Size ------------------------------------------------------------
@@ -70,6 +71,6 @@
 @media (min-width: 1000px) {}
 
 // -- Larger than Desktop HD ---------------------------------------------------
-@media (min-width: 1200px)
-  .container
-    max-width           : 1200px
+@media (min-width: 1200px) {}
+  // .container
+  //   max-width           : 1200px

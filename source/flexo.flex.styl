@@ -1,0 +1,76 @@
+// -- Stylus Methods -----------------------------------------------------------
+vendor(prop, args)
+  for vendor in webkit moz ms
+    -{vendor}-{prop} args
+  {prop} args
+
+display-flex()
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+flex()
+  vendor('flex', arguments)
+
+flex-direction()
+  vendor('flex-direction', arguments)
+
+flex-grow()
+  vendor('flex-grow', arguments)
+
+flex-flow()
+  vendor('flex-flow', arguments)
+
+flex-wrap()
+  vendor('flex-wrap', arguments)
+
+flex-shrink()
+  vendor('flex-shrink', arguments)
+
+justify-content()
+  vendor('justify-content', arguments)
+
+align-content()
+  vendor('align-content', arguments)
+
+align-items()
+  vendor('align-items', arguments)
+
+order()
+  vendor('order', arguments)
+
+align-self()
+  vendor('align-self', arguments)
+// -- /Stylus Methods ----------------------------------------------------------
+
+[data-flex]
+  display-flex()
+  body&
+    position            : absolute
+    left                : 0
+    top                 : 0
+    bottom              : 0
+    width               : 100%
+    overflow            : hidden
+
+  .scroll
+    overflow            : scroll
+
+
+// -- Direction ----------------------------------------------------------------
+[data-flex^="horizontal"]
+  flex-direction row
+
+[data-flex^="vertical"]
+  flex-direction column
+
+// -- Children size ------------------------------------------------------------
+[data-flex*="grow-children"]
+  > *:not([data-column])
+    flex-grow 1
+
+[data-flex*="wrap"]
+  flex-wrap wrap
+

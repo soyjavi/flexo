@@ -1,0 +1,226 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Flexo: A dead simple, responsive & flexible boilerplate</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="../dist/flexo.css">
+  <link rel="stylesheet" href="../dist/flexo.theme.css">
+  <link rel="stylesheet" href="site.css">
+  <link rel="icon" type="image/png" href="../dist/images/favicon.png">
+</head>
+<body data-flex="horizontal grow-children">
+
+  <aside class="bck theme-dark color white" data-column="2">
+    <h5><strong>Features</strong></h5>
+    <ul data-flex="vertical" class="none">
+      <strong>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#grid">The Grid</a></li>
+        <li><a href="#">Simple Syntax</a></li>
+        <li><a href="#">Offsets</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#button">Buttons</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#list">List</a></li>
+        <li><a href="#form">Form</a></li>
+      </strong>
+    </ul>
+    <ul data-flex="horizontal wrap grow-children">
+      <li><a href="#">Responsive</a></li>
+      <li><a href="#">Fluid</a></li>
+      <li><a href="#">Simple Syntax</a></li>
+      <li><a href="#">Offsets</a></li>
+      <li><a href="#">Auto width</a></li>
+    </ul>
+  </aside>
+
+  <article class="scroll">
+    <div class="align center landing">
+      <h1><strong>Flexo</strong></h1>
+      <h5>A dead simple, responsive & <strong class="color theme">flexible</strong> boilerplate.</h5>
+      <a href="/" class="button">Download</a>
+      <a href="/" class="button">Github</a>
+    </div>
+
+    <div class="bck dark">
+      <div class="container">
+        <section id="intro" class="row">
+          <h6>IS FLEXO FOR YOU?</h6>
+          <p>
+            You should use Flexo if you're embarking on a smaller project or just don't feel like you need all the utility of larger frameworks. Flexo only styles a handful of standard HTML elements and includes a grid, but that's often more than enough to get started. In fact, this site is built on Flexo and has ~200 lines of custom CSS (half of which is the docking navigation).
+          </p>
+          </p>
+            Love Flexo and want to Tweet it, share it, or star it? Well, I appreciate that
+          </p>
+        </section>
+
+        <section id="grid" class="row">
+          <h6>THE GRID</h6>
+          <p>
+            The grid is a 12-column fluid grid with a max width of 960px, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.
+          </p>
+        </section>
+
+        <section class="row">
+          <div class="bck theme" data-column="1">1</div>
+          <div class="bck theme" data-column="11">11</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="2">2</div>
+          <div class="bck theme" data-column="10">10</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="3">3</div>
+          <div class="bck theme" data-column="9">9</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="4">4</div>
+          <div class="bck theme" data-column="8">8</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="5">5</div>
+          <div class="bck theme" data-column="7">7</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="6">6</div>
+          <div class="bck theme" data-column="6">6</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="7">7</div>
+          <div class="bck theme" data-column="5">5</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="8">8</div>
+          <div class="bck theme" data-column="4">4</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="9">9</div>
+          <div class="bck theme" data-column="3">3</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="10">10</div>
+          <div class="bck theme" data-column="2">2</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="11">11</div>
+          <div class="bck theme" data-column="1">1</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="12">12</div>
+        </section>
+        <!-- OFFSET -------------------------------------------------------- -->
+
+        <section class="row">
+          <div class="bck theme" data-column="11" data-offset="1">11 - 1</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="10" data-offset="2">10 - 2</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="9" data-offset="3">9 - 3</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="8" data-offset="4">8 - 4</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="7" data-offset="5">7 - 5</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="6" data-offset="6">6 - 6</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="5" data-offset="7">5 - 7</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="4" data-offset="8">4 - 8</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="3" data-offset="9">3 - 9</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="2" data-offset="10">2 - 10</div>
+        </section>
+        <section class="row">
+          <div class="bck theme" data-column="1" data-offset="11">1 - 11</div>
+        </section>
+
+        <!-- CODE ---------------------------------------------------------- -->
+        <pre><code>
+        var flexo = "hello world";
+        </code></pre>
+
+        <!-- TYPOGRAPHY ---------------------------------------------------- -->
+        <section id="typography" class="row">
+          <h6>TYPOGRAPHY</h6>
+          <p>
+            Type is all set with the rems, so font-sizes and spacial relationships can be responsively sized based on a single "html" font-size property. Out of the box, Flexo never changes the "html" font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an "h1" with 5.0remfont-size just means 50px.
+          </p>
+        </section>
+        <section class="row">
+          <div data-column="6">
+            <p>
+              The typography base is Raleway served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like anchors, strong, emphasis, and underline are all obviously included.
+            </p>
+            <p>
+              Headings create a family of distinct sizes each with specific letter-spacing, line-height, and margins.
+            </p>
+          </div>
+          <div data-column="6">
+            <small>50rem</small><h1>Heading h1</h1>
+            <small>42rem</small><h2>Heading h2</h2>
+            <small>36rem</small><h3>Heading h3</h3>
+            <small>30rem</small><h4>Heading h4</h4>
+            <small>24rem</small><h5>Heading h5</h5>
+            <small>15rem</small><h6>Heading h6</h6>
+          </div>
+        </section>
+
+        <!-- BUTTONS ------------------------------------------------------- -->
+        <section id="button" class="row">
+          <h6>BUTTONS</h6>
+          <p>
+            Buttons come in two basic flavors in Flexo. The standard "button" element is plain, whereas the .button-primary button is vibrant and prominent. Button styles are applied to a number of appropriate form elements, but can also be arbitrarily attached to anchors with a .button class.
+          </p>
+          <div>
+            <div>
+              <a class="button" href="#">Anchor button</a>
+              <button>Button element</button>
+              <input type="submit" value="submit input">
+              <input type="button" value="button input">
+            </div>
+            <div>
+              <a class="button primary" href="#">Anchor button</a>
+              <button class="primary">Button element</button>
+              <input class="primary" type="submit" value="submit input">
+              <input class="primary" type="button" value="button input">
+            </div>
+          </div>
+        </section>
+
+
+        <!-- TABLE --------------------------------------------------------- -->
+        <section id="table" class="row">
+          <h6>TABLE</h6>
+          <p></p>
+        </section>
+
+        <!-- LIST ---------------------------------------------------------- -->
+        <section id="list" class="row">
+          <h6>LIST</h6>
+          <p></p>
+        </section>
+
+        <!-- FORM --------------------------------------------------------- -->
+        <section id="form" class="row">
+          <h6>FORM</h6>
+          <p></p>
+        </section>
+      </div>
+
+    </div>
+
+  </article>
+</body>
+</html>

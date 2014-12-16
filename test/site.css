@@ -1,0 +1,22 @@
+.landing {
+  margin: 4rem 0;
+}
+  .landing > h1 {
+    font-size: 16rem;
+  }
+
+.container {
+  padding: 4rem 0
+}
+
+.row > h6 {
+  font-weight: bold;
+}
+
+aside {
+  padding: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: #007FFF;
+}
