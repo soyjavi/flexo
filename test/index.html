@@ -17,13 +17,18 @@
     <ul data-flex="vertical" class="none" data-flex-grow="max">
       <li><a href="#intro">Introduction</a></li>
       <li><a href="#grid">The Grid</a></li>
-      <li><a href="#">Simple Syntax</a></li>
-      <li><a href="#">Offsets</a></li>
       <li><a href="#typography">Typography</a></li>
       <li><a href="#button">Buttons</a></li>
       <li><a href="#table">Table</a></li>
       <li><a href="#list">List</a></li>
+      <li><a href="#code">Code</a></li>
       <li><a href="#form">Form</a></li>
+      <li><a href="#media">Media Queries</a></li>
+      <li><strong>Flex layout</strong></li>
+      <li><a href="#flexbox">Flexbox Model</a></li>
+      <li><a href="#flexbox">Centered elements</a></li>
+      <li><a href="#flexbox">Weights</a></li>
+
     </ul>
     <footer data-flex="horizontal center" data-flex-grow="min">
       <img src="http://cdn.tapquo.com/photos/soyjavi.jpg" />Crafted by <a href="http://soyjavi.com" target="_blank">@soyjavi</a></footer>
@@ -106,43 +111,41 @@
         </section>
         <!-- OFFSET -------------------------------------------------------- -->
         <section class="row">
-          <div class="bck theme" data-column="11" data-offset="1">11 - 1</div>
+          <div class="bck theme" data-column="11" data-offset="1">11/1</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="10" data-offset="2">10 - 2</div>
+          <div class="bck theme" data-column="10" data-offset="2">10/2</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="9" data-offset="3">9 - 3</div>
+          <div class="bck theme" data-column="9" data-offset="3">9/3</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="8" data-offset="4">8 - 4</div>
+          <div class="bck theme" data-column="8" data-offset="4">8/4</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="7" data-offset="5">7 - 5</div>
+          <div class="bck theme" data-column="7" data-offset="5">7/5</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="6" data-offset="6">6 - 6</div>
+          <div class="bck theme" data-column="6" data-offset="6">6/6</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="5" data-offset="7">5 - 7</div>
+          <div class="bck theme" data-column="5" data-offset="7">5/7</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="4" data-offset="8">4 - 8</div>
+          <div class="bck theme" data-column="4" data-offset="8">4/8</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="3" data-offset="9">3 - 9</div>
+          <div class="bck theme" data-column="3" data-offset="9">3/9</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="2" data-offset="10">2 - 10</div>
+          <div class="bck theme" data-column="2" data-offset="10">2/10</div>
         </section>
         <section class="row">
-          <div class="bck theme" data-column="1" data-offset="11">1 - 11</div>
+          <div class="bck theme" data-column="1" data-offset="11">1/11</div>
         </section>
 
         <!-- CODE ---------------------------------------------------------- -->
-        <pre><code>
-        var flexo = "hello world";
-        </code></pre>
+        <pre><code>var flexo = "hello world";</code></pre>
 
         <!-- TYPOGRAPHY ---------------------------------------------------- -->
         <section id="typography" class="row">
@@ -191,7 +194,6 @@
             </div>
           </div>
         </section>
-
 
         <!-- TABLE --------------------------------------------------------- -->
         <section id="table" class="row">
@@ -244,13 +246,105 @@
         <!-- LIST ---------------------------------------------------------- -->
         <section id="list" class="row">
           <h6>LIST</h6>
-          <p></p>
+        </section>
+        <section class="row">
+          <ul data-column="6">
+            <li>Unordered lists have basic styles</li>
+            <li>
+              They use the circle list style
+              <ul>
+                <li>Nested lists styled to feel right</li>
+                <li>Can nest either type of list into the other</li>
+              </ul>
+            </li>
+            <li>Just more list items mama san</li>
+          </ul>
+          <ol  data-column="6">
+            <li>Ordered lists also have basic styles</li>
+            <li>
+              They use the decimal list style
+              <ul>
+                <li>Ordered and unordered can be nested</li>
+                <li>Can nest either type of list into the other</li>
+              </ul>
+            </li>
+            <li>Last list item just for the fun</li>
+          </ol>
         </section>
 
-        <!-- FORM --------------------------------------------------------- -->
+       <!-- CODE ---------------------------------------------------------- -->
+        <section id="form" class="row">
+          <h6>CODE</h6>
+          <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
+          <pre><code>.some-class {
+  background-color: red;
+}</code></pre>
+        </section>
+
+        <!-- FORM ---------------------------------------------------------- -->
         <section id="form" class="row">
           <h6>FORM</h6>
-          <p></p>
+          <p>Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are normalized for a common height cross-browser so inputs can be stacked or placed alongside each other.</p>
+        </section>
+        <form>
+          <div class="row">
+            <div data-column="6">
+              <label for="exampleEmailInput">Your email</label>
+              <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+            </div>
+            <div data-column="6">
+              <label for="exampleRecipientInput">Reason for contacting</label>
+              <select class="u-full-width" id="exampleRecipientInput">
+                <option value="Option 1">Questions</option>
+                <option value="Option 2">Admiration</option>
+                <option value="Option 3">Can I get your number?</option>
+              </select>
+            </div>
+          </div>
+          <label for="exampleMessage">Message</label>
+          <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+          <label class="example-send-yourself-copy">
+            <input type="checkbox">
+            <span class="label-body">Send a copy to yourself</span>
+          </label>
+          <input class="primary" type="submit" value="Submit">
+        </form>
+
+        <!-- MEDIA QUERIES ------------------------------------------------- -->
+        <section id="media" class="row">
+          <h6>MEDIA QUERIES</h6>
+          <p>
+            Flexo uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Flexo's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
+          </p>
+        </section>
+        <section id="form" class="row">
+          <ul data-column="6">
+            <li><strong>Desktop HD:</strong>1200px</li>
+            <li><strong>Desktop:</strong>1000px</li>
+            <li><strong>Tablet:</strong>750px</li>
+          </ul>
+          <ul data-column="6">
+            <li><strong>Phablet:</strong>550px</li>
+            <li><strong>Mobile:</strong>400px</li>
+          </ul>
+        </section>
+        <section id="form" class="row">
+          <pre><code>/* Mobile first queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}</code></pre>
         </section>
       </div>
 

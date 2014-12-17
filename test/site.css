@@ -55,6 +55,7 @@ aside {
 
 .row > h6 {
   padding-top: 2rem;
+  margin-bottom: .5rem;
   font-size: 125%;
   font-weight: bold;
 }
