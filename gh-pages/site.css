@@ -1,5 +1,10 @@
-aside {
+@media (max-width: 1024px) {
+  aside {
+    display: none !important;
+  }
 }
+
+aside {}
   aside header, ul, footer {
     padding: 1rem 1.5rem;
   }

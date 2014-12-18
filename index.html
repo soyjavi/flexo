@@ -1,10 +1,10 @@
 <html lang="en"><head>
   <meta charset="utf-8">
-  <title>Flexo: A dead simple, responsive & flexible boilerplate</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Flexo</title>
+  <meta name="description" content="A dead simple, responsive & flexible boilerplate">
+  <meta name="author" content="@soyjavi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="dist/flexo.css">
   <link rel="stylesheet" href="dist/flexo.theme.css">
   <link rel="stylesheet" href="gh-pages/site.css">
@@ -354,41 +354,138 @@
             Flexo uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Flexo's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
           </p>
         </section>
+
         <section class="row">
-          <div data-column="6" data-flex="horizontal" class="box-container">
-            <div class="box">one</div>
-            <div class="box">two</div>
-            <div class="box">three</div>
+          <div data-column="6">
+            <strong>Horizontal alignment</strong>
+            <div  data-flex="horizontal" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="horizontal"&gt;
+  &lt;div&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
-          <div data-column="6" data-flex="vertical" class="box-container">
-            <div class="box">one</div>
-            <div class="box">two</div>
-            <div class="box">three</div>
+
+          <div data-column="6">
+            <strong>Vertical alignment</strong>
+            <div data-flex="vertical" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="vertical"&gt;
+  &lt;div&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
         </section>
+
+        <section id="flexbox" class="row">
+          <h6>Growing items</h6>
+          <p>
+            lorem ipsum
+          </p>
+        </section>
+
         <section class="row">
-          <div data-column="6" data-flex="horizontal grow" class="box-container">
-            <div class="box">one</div>
-            <div class="box">two</div>
-            <div class="box">three</div>
+          <div data-column="6">
+            <strong>Vertical alignment</strong>
+            <div data-flex="horizontal grow" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="horizontal grow"&gt;
+  &lt;div&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
-          <div data-column="6" data-flex="vertical grow" class="box-container">
-            <div class="box">one</div>
-            <div class="box">two</div>
-            <div class="box">three</div>
+          <div data-column="6">
+            <strong>Vertical alignment</strong>
+            <div data-flex="vertical grow" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="vertical grow"&gt;
+  &lt;div&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
         </section>
+
         <section class="row">
-          <div data-column="6" data-flex="horizontal grow" class="box-container">
-            <div class="box" data-flex-grow="min">one</div>
-            <div class="box">two</div>
-            <div class="box" data-flex-grow="max">three</div>
+          <div data-column="6">
+            <strong>Vertical alignment</strong>
+            <div data-flex="horizontal grow" class="box-container">
+              <div class="box" data-flex-grow="min">one</div>
+              <div class="box">two</div>
+              <div class="box" data-flex-grow="max">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="vertical grow"&gt;
+  &lt;div  data-flex-grow="min"&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div data-flex-grow="max"&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
-          <div data-column="6" data-flex="vertical grow" class="box-container">
-            <div class="box" data-flex-grow="min">one</div>
-            <div class="box">two</div>
-            <div class="box" data-flex-grow="max">three</div>
+          <div data-column="6">
+            <strong>Vertical alignment</strong>
+            <div data-flex="vertical grow" class="box-container">
+              <div class="box" data-flex-grow="min">one</div>
+              <div class="box">two</div>
+              <div class="box" data-flex-grow="max">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="vertical grow"&gt;
+  &lt;div  data-flex-grow="min"&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div  data-flex-grow="max"&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
+        </section>
+
+        <section id="flexbox" class="row">
+          <h6>Wrapping elements</h6>
+          <p>
+            lorem ipsum
+          </p>
+        </section>
+
+        <section class="row">
+          <div data-column="6">
+            <div data-flex="horizontal wrap" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+              <div class="box">four</div>
+              <div class="box">five</div>
+              <div class="box">six</div>
+              <div class="box">seven</div>
+            </div>
+            <pre><code>&lt;div data-flex="vertical wrap"&gt;
+  &lt;div&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div&gt;three&lt;/div&gt;
+  &lt;div&gt;four&lt;/div&gt;
+  &lt;div&gt;five&lt;/div&gt;
+  &lt;div&gt;six&lt;/div&gt;
+  &lt;div&gt;seven&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+        </section>
+
+        <section id="flexbox" class="row">
+          <h6>Container alignments</h6>
+          <p>
+            lorem ipsum
+          </p>
         </section>
 
         <section class="row">
@@ -408,10 +505,16 @@
             <div class="box">three</div>
           </div>
         </section>
+
+        <section id="flexbox" class="row">
+          <h6>Order items</h6>
+          <p>
+            lorem ipsum
+          </p>
+        </section>
+
       </div>
-
     </div>
-
   </article>
 </body>
 </html>

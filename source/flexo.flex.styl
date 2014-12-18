@@ -48,15 +48,17 @@ align-self()
 [data-flex]
   display-flex()
   body&
-    position            : absolute
-    left                : 0
-    top                 : 0
-    bottom              : 0
-    width               : 100%
-    overflow            : hidden
+    position                  : absolute
+    left                      : 0
+    top                       : 0
+    bottom                    : 0
+    width                     : 100%
+    overflow                  : hidden
 
   .scroll
-    overflow            : scroll
+    overflow-x                : hidden
+    overflow-y                : scroll
+    -webkit-overflow-scrolling: touch
 
 
 // -- Direction ----------------------------------------------------------------
@@ -76,7 +78,7 @@ align-self()
 [data-flex-grow="max"]
   flex-grow 2
 
-// -- Position -----------------------------------------------------------------
+// -- Container properties -----------------------------------------------------
 [data-flex*="wrap"]
   flex-wrap wrap
 
@@ -105,3 +107,10 @@ align-self()
   align-items flex-start
 [data-flex-items="end"]
   align-items flex-end
+
+// -- Children properties ------------------------------------------------------
+[data-flex-order="first"]
+  order 0
+
+[data-flex-order="last"]
+  order 999999
