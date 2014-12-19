@@ -15,6 +15,7 @@
   <aside class="bck theme-dark color white" data-column="2" data-flex="vertical">
     <header>Features</header>
     <ul data-flex="vertical" class="none" data-flex-grow="max">
+      <li><strong>Basics</strong></li>
       <li><a href="#intro">Introduction</a></li>
       <li><a href="#grid">The Grid</a></li>
       <li><a href="#typography">Typography</a></li>
@@ -25,19 +26,22 @@
       <li><a href="#form">Form</a></li>
       <li><a href="#media">Media Queries</a></li>
       <li><strong>Flex layout</strong></li>
-      <li><a href="#flexbox">Flexbox Model</a></li>
-      <li><a href="#flexbox">Centered elements</a></li>
-      <li><a href="#flexbox">Weights</a></li>
+      <li><a href="#flex-layout">Introduction</a></li>
+      <li><a href="#flex-grow">Grow</a></li>
+      <li><a href="#flex-justify">Justify</a></li>
+      <li><a href="#flex-align">Align</a></li>
+      <li><a href="#flex-wrap">Wrap</a></li>
+      <li><a href="#flex-order">Order</a></li>
     </ul>
     <footer data-flex="horizontal center" data-flex-grow="min">
-      <img src="http://cdn.tapquo.com/photos/soyjavi.jpg" />Crafted by <a href="http://soyjavi.com" target="_blank">@soyjavi</a></footer>
+      <img src="http://cdn.tapquo.com/photos/soyjavi.jpg" />by<a href="http://soyjavi.com" target="_blank">@soyjavi</a></footer>
   </aside>
 
   <article class="scroll">
     <div class="align center landing">
       <h1><strong>Flexo</strong></h1>
       <h5>A dead simple, responsive & <strong class="color theme">flexible</strong> boilerplate.</h5>
-      <a href="https://github.com/soyjavi/flexo/releases" class="button">Download</a>
+      <a href="https://github.com/soyjavi/flexo/archive/1.0.0.zip" class="button">Download</a>
       <a href="https://github.com/soyjavi/flexo" class="button">Github</a>
       <pre><code>bower install flexo</code></pre>
     </div>
@@ -272,7 +276,7 @@
         </section>
 
        <!-- CODE ---------------------------------------------------------- -->
-        <section id="form" class="row">
+        <section id="code" class="row">
           <h6>CODE</h6>
           <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
           <pre><code>.some-class {
@@ -348,10 +352,13 @@
 
 
         <!-- MEDIA QUERIES ------------------------------------------------- -->
-        <section id="flexbox" class="row">
-          <h6>FLEXBOX MODEL</h6>
+        <section id="flex-layout" class="row">
+          <h6>FLEXBOX LAYOUT</h6>
           <p>
-            Flexo uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target min-width. Mobile-first queries are how Flexo's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:
+            The Flexbox Layout (Flexible Box) module (currently a W3C Candidate Recommendation) aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word "flex"). The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.
+          </p>
+          <p>
+            Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). While those work well for pages, they lack flexibility (no pun intended) to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).
           </p>
         </section>
 
@@ -385,16 +392,16 @@
           </div>
         </section>
 
-        <section id="flexbox" class="row">
+        <section id="flex-grow" class="row">
           <h6>Growing items</h6>
           <p>
-            lorem ipsum
+            If you need that all the elements resized in a fluid way you will have to set the <code>"grow"</code> class in the container. You can also define this growth for each of the elements with the attribute <code>data-flex-grow</code>.
           </p>
         </section>
 
         <section class="row">
           <div data-column="6">
-            <strong>Vertical alignment</strong>
+            <strong>Horizontal grow</strong>
             <div data-flex="horizontal grow" class="box-container">
               <div class="box">one</div>
               <div class="box">two</div>
@@ -407,7 +414,7 @@
 &lt;/div&gt;</code></pre>
           </div>
           <div data-column="6">
-            <strong>Vertical alignment</strong>
+            <strong>Vertical grow</strong>
             <div data-flex="vertical grow" class="box-container">
               <div class="box">one</div>
               <div class="box">two</div>
@@ -423,7 +430,7 @@
 
         <section class="row">
           <div data-column="6">
-            <strong>Vertical alignment</strong>
+            <strong>Horizontal with different grows</strong>
             <div data-flex="horizontal grow" class="box-container">
               <div class="box" data-flex-grow="min">one</div>
               <div class="box">two</div>
@@ -436,7 +443,7 @@
 &lt;/div&gt;</code></pre>
           </div>
           <div data-column="6">
-            <strong>Vertical alignment</strong>
+            <strong>Vertical with different grows</strong>
             <div data-flex="vertical grow" class="box-container">
               <div class="box" data-flex-grow="min">one</div>
               <div class="box">two</div>
@@ -450,15 +457,85 @@
           </div>
         </section>
 
-        <section id="flexbox" class="row">
+        <!-- FLEX: Justity ------------------------------------------------- -->
+        <section id="flex-justify" class="row">
+          <h6>Justify</h6>
+          <p>
+            Use the attribute <code>data-flex-justify</code> to set the justify of the items contained in a <code>data-flex</code> element:
+          </p>
+        </section>
+        <section class="row">
+          <div data-column="4">
+            <strong>"start"</strong>
+            <div data-flex="horizontal wrap"  data-flex-justify="start" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+          </div>
+          <div data-column="4">
+            <strong>"center"</strong>
+            <div data-flex="horizontal wrap"  data-flex-justify="center" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+          </div>
+          <div data-column="4">
+            <strong>"end"</strong>
+            <div data-flex="horizontal wrap"  data-flex-justify="end" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FLEX: Items --------------------------------------------------- -->
+        <section id="flex-align" class="row">
+          <h6>Align items</h6>
+          <p>
+            Use the attribute <code>data-flex-items</code> to set the items of the items contained in a <code>data-flex</code> element:
+          </p>
+        </section>
+        <section class="row">
+          <div data-column="4">
+            <strong>"start"</strong>
+            <div data-flex="horizontal wrap"  data-flex-items="start" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+          </div>
+          <div data-column="4">
+            <strong>"center"</strong>
+            <div data-flex="horizontal wrap"  data-flex-items="center" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+          </div>
+          <div data-column="4">
+            <strong>"end"</strong>
+            <div data-flex="horizontal wrap"  data-flex-items="end" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FLEX: Wrap ---------------------------------------------------- -->
+        <section id="flex-wrap" class="row">
           <h6>Wrapping elements</h6>
           <p>
-            lorem ipsum
+            Sometimes your items have dimensions and therefore cannot be resized. In case the container can not contain more elements in the same row / column these elements jump to a new row / column.
           </p>
         </section>
 
         <section class="row">
           <div data-column="6">
+            <strong>"normal"</strong>
             <div data-flex="horizontal wrap" class="box-container">
               <div class="box">one</div>
               <div class="box">two</div>
@@ -466,7 +543,6 @@
               <div class="box">four</div>
               <div class="box">five</div>
               <div class="box">six</div>
-              <div class="box">seven</div>
             </div>
             <pre><code>&lt;div data-flex="vertical wrap"&gt;
   &lt;div&gt;one&lt;/div&gt;
@@ -479,40 +555,100 @@
 &lt;/div&gt;</code></pre>
           </div>
 
+            <div data-column="6">
+              <strong>"center"</strong>
+              <div  data-flex="horizontal center" class="box-container">
+                <div class="box">one</div>
+                <div class="box">two</div>
+                <div class="box">three</div>
+              </div>
+              <pre><code>&lt;div data-flex="vertical center"&gt;
+  &lt;div&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
         </section>
 
-        <section id="flexbox" class="row">
-          <h6>Container alignments</h6>
+        <!-- FLEX: Content ------------------------------------------------- -->
+        <section class="row">
+          <h6>Justify Content</h6>
           <p>
-            lorem ipsum
+            Use the attribute <code>data-flex-content</code> to set the direction of the items contained in a <code>data-flex</code> element:
+          </p>
+        </section>
+        <section class="row">
+          <div data-column="4">
+            <strong>data-flex-content="start"</strong>
+            <div data-flex="horizontal wrap"  data-flex-content="start" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+              <div class="box">four</div>
+              <div class="box">five</div>
+              <div class="box">six</div>
+            </div>
+          </div>
+          <div data-column="4">
+            <strong>data-flex-content="center"</strong>
+            <div data-flex="horizontal wrap"  data-flex-content="center" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+              <div class="box">four</div>
+              <div class="box">five</div>
+              <div class="box">six</div>
+            </div>
+          </div>
+          <div data-column="4">
+            <strong>data-flex-content="end"</strong>
+            <div data-flex="horizontal wrap"  data-flex-content="end" class="box-container">
+              <div class="box">one</div>
+              <div class="box">two</div>
+              <div class="box">three</div>
+              <div class="box">four</div>
+              <div class="box">five</div>
+              <div class="box">six</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FLEX: Order --------------------------------------------------- -->
+        <section id="flex-order" class="row">
+          <h6>Order items</h6>
+          <p>
+            You can re-order items using the attribute <code>data-flex-order</code>.
           </p>
         </section>
 
         <section class="row">
-          <div data-column="6" data-flex="horizontal wrap"  data-flex-content="end" data-flex-items="end" data-justify="center" class="box-container">
-            <div class="box">one</div>
-            <div class="box">two</div>
-            <div class="box">three</div>
-            <div class="box">four</div>
-            <div class="box">five</div>
-            <div class="box">six</div>
-            <div class="box">seven</div>
+          <div data-column="6">
+            <strong>horizontal</strong>
+            <div data-flex="horizontal" class="box-container">
+              <div class="box" data-flex-order="last">one</div>
+              <div class="box">two</div>
+              <div class="box" data-flex-order="first">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="horizontal"&gt;
+  &lt;div data-flex-order="last"&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div data-flex-order="first"&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
-
-          <div data-column="6" data-flex="horizontal center" class="box-container">
-            <div class="box">one</div>
-            <div class="box">two</div>
-            <div class="box">three</div>
+          <div data-column="6">
+            <strong>vertical</strong>
+            <div data-flex="vertical" class="box-container">
+              <div class="box" data-flex-order="last">one</div>
+              <div class="box">two</div>
+              <div class="box" data-flex-order="first">three</div>
+            </div>
+            <pre><code>&lt;div data-flex="vertical"&gt;
+  &lt;div data-flex-order="last"&gt;one&lt;/div&gt;
+  &lt;div&gt;two&lt;/div&gt;
+  &lt;div data-flex-order="first"&gt;three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
         </section>
-
-        <section id="flexbox" class="row">
-          <h6>Order items</h6>
-          <p>
-            lorem ipsum
-          </p>
-        </section>
-
       </div>
     </div>
   </article>
