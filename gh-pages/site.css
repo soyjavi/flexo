@@ -13,6 +13,11 @@ aside {}
     font-size: 125%;
     font-weight: bold;
   }
+  aside strong {
+    font-size: 80%;
+    font-weight: normal;
+  }
+
   aside a {
     text-decoration: none;
     color: #007FFF;
@@ -35,6 +40,7 @@ aside {}
     }
     aside footer a {
       margin-left: .5rem;
+      font-weight: bold;
     }
 
 
@@ -42,7 +48,7 @@ aside {}
   margin: 4rem 0;
 }
   .landing > h1 {
-    font-size: 16rem;
+    font-size: 12rem;
   }
   .landing .button {
     font-size: 1.25rem;
@@ -69,7 +75,7 @@ aside {}
   padding: 0.5rem;
   overflow: hidden;
   background-color: rgba(0,0,0,0.1);
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
   border-radius: 2px;
   min-height: 16rem;
 }

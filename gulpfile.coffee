@@ -11,8 +11,14 @@ pkg     = require "./package.json"
 flexo   =
   source: [ "source/normalize.styl"
             "source/flexo.styl"
-            "source/flexo.*.styl"]
-  theme : []
+            "source/flexo.button.styl"
+            "source/flexo.flex.styl"
+            "source/flexo.form.styl"
+            "source/flexo.grid.styl"
+            "source/flexo.list.styl"
+            "source/flexo.table.styl"
+            "source/flexo.typography.styl"]
+  theme : [ "source/flexo.theme.styl"]
   bower : "dist/"
 
 banner = [
@@ -41,8 +47,18 @@ gulp.task "stylus", ->
     .pipe gulp.dest flexo.bower
     .pipe connect.reload()
 
+  gulp.src flexo.theme
+    .pipe concat "flexo.theme.styl"
+    .pipe stylus
+      compress: true
+      errors  : true
+    .pipe header banner, pkg: pkg
+    .pipe gulp.dest flexo.bower
+    .pipe connect.reload()
+
 gulp.task "init", ["stylus"]
 
 gulp.task "default", ->
   gulp.run ["webserver"]
   gulp.watch flexo.source, ["stylus"]
+  gulp.watch flexo.theme, ["stylus"]

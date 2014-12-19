@@ -1,0 +1,60 @@
+// -- CONSTANTS ----------------------------------------------------------------
+COLOR                       = #001A33
+BACKGROUND                  = #f8f8f8
+THEME                       = #007FFF
+WHITE                       = #fff
+BORDER-RADIUS               = 4px
+
+// -- BASE ---------------------------------------------------------------------
+body
+  color                     : COLOR
+
+.bck
+  background-color          : BACKGROUND
+  &.theme
+    background-color        : THEME
+    color                   : WHITE
+  &.color
+    background-color        : COLOR
+
+.color
+  &.white
+    color                   : WHITE
+  &.theme
+    color                   : THEME
+
+// -- BUTTON -------------------------------------------------------------------
+.button, button, input[type="submit"], input[type="reset"], input[type="button"]
+  border                    : 1px solid #bbb
+  border-radius             : BORDER-RADIUS
+  &:hover, &:focus
+    color                   : #333
+    border-color            : #888
+  &.primary
+    color                   : WHITE
+    background-color        : THEME
+    border-color            : darken(THEME, 5%)
+    &:hover, &:focus
+      color                 : WHITE
+      background-color      : darken(THEME, 10%)
+      border-color          : darken(THEME, 15%)
+
+// -- FORM ---------------------------------------------------------------------
+input[type="email"], input[type="search"], input[type="text"], input[type="tel"],
+input[type="url"], input[type="password"], textarea, select
+  background-color          : WHITE
+  border                    : 1px solid #D1D1D1
+  border-radius             : BORDER-RADIUS
+  & :focus
+    border                  : 1px solid #33C3F0
+
+// -- TABLE ---------------------------------------------------------------------
+table
+  th, td
+    border-bottom           : 1px solid #E1E1E1
+
+// -- CODE ---------------------------------------------------------------------
+code
+  background                : darken(BACKGROUND, 5%)
+  border                    : 1px solid darken(BACKGROUND, 10%)
+  border-radius             : BORDER-RADIUS
