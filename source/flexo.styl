@@ -30,7 +30,6 @@ body
 
 .row
   display                   : block
-  margin-bottom             : 1.5rem
 
 .container, .row
   &:after
@@ -60,8 +59,8 @@ body
   &.right
     text-align: right
 
-input, textarea, select, fieldset
-  margin-bottom             : 1.5rem
+input, textarea, select, fieldset, .row
+  margin-bottom             : (1.5 * UNIT)
 
 pre, blockquote, form, dl, figure, table, p, ul, ol, form
-  margin-bottom             : 2.5rem
+  margin-bottom             : (2 * UNIT)
