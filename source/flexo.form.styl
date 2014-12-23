@@ -1,37 +1,43 @@
 input[type="email"], input[type="search"], input[type="text"], input[type="tel"],
 input[type="url"], input[type="password"], textarea, select
-  width               : 100%
-  height              : FORM-HEIGHT
-  padding             : (UNIT / 2) (UNIT / 1.25)
-  box-shadow          : none
-  box-sizing          : border-box
+  width                       : 100%
+  height                      : FORM-HEIGHT
+  padding                     : (UNIT / 2) (UNIT / 1.25)
+  box-shadow                  : none
+  box-sizing                  : border-box
   & :focus
-    outline           : 0
+    outline                   : 0
 
 input[type="email"], input[type="search"], input[type="text"], input[type="tel"],
 input[type="url"], input[type="password"], textarea
-  -webkit-appearance  : none
-  -moz-appearance     : none
-  appearance          : none
+  -webkit-appearance          : none
+  -moz-appearance             : none
+  appearance                  : none
+  outline                     : none
+  -webkit-tap-highlight-color : rgba(255, 255, 255, 0)
+  -webkit-touch-callout       : none
 
 textarea
-  min-height          : (7 * UNIT)
-  padding-top         : (UNIT / 2)
-  padding-bottom      : (UNIT / 2)
+  min-height                  : (7 * UNIT)
+  padding-top                 : (UNIT / 2)
+  padding-bottom              : (UNIT / 2)
 
 label, legend
-  display             : block
-  margin-bottom       : (UNIT / 2)
-  font-size           : FONT-SIZE-SMALL
-  font-weight         : 600
+  display                     : block
+  margin-bottom               : (UNIT / 2)
+  font-size                   : FONT-SIZE-SMALL
+  font-weight                 : 600
 
 fieldset
-  padding             : 0
-  border-width        : 0
+  padding                     : 0
+  border-width                : 0
 input[type="checkbox"], input[type="radio"]
-  display             : inline
+  display                     : inline
 
 label > span
-  display             : inline-block
-  margin-left         : (UNIT / 2)
-  font-weight         : normal
+  display                     : inline-block
+  margin-left                 : (UNIT / 2)
+  font-weight                 : normal
+
+input, textarea, select, fieldset, .row
+  margin-bottom             : 1.5rem

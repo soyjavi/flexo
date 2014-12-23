@@ -1,9 +1,11 @@
 // -- CONSTANTS ----------------------------------------------------------------
-FONT-SIZE                   = 1.5em
 FONT-FAMILY                 = "Raleway"
+FONT-SIZE                   = 1.5rem
+LINE-HEIGHT                 = 1.6
 FONT-WEIGHT-NORMAL          = 400
 FONT-SIZE-TINY              = 72.5%
 FONT-SIZE-SMALL             = 90%
+// LINE-HEIGHT                 = 100%
 UNIT                        = 1rem
 FORM-HEIGHT                 = (3.5 * UNIT)
 
@@ -13,13 +15,13 @@ html
 
 body
   font-size                 : FONT-SIZE
-  line-height               : 1.6
+  line-height               : LINE-HEIGHT
   font-weight               : FONT-WEIGHT-NORMAL
   font-family               : "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
 
 .container
   position                  : relative
-  width                     : 80%
+  width                     : 90%
   max-width                 : 960px
   margin                    : 0 auto
   padding                   : 0
@@ -40,9 +42,3 @@ body
     text-align: center
   &.right
     text-align: right
-
-input, textarea, select, fieldset, .row
-  margin-bottom             : (1.5 * UNIT)
-
-pre, blockquote, form, dl, figure, table, p, ul, ol, form
-  margin-bottom             : (2 * UNIT)
