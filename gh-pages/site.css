@@ -45,20 +45,23 @@ aside {}
 
 
 .landing {
-  margin: 4rem 0;
+  margin: 5rem 0;
 }
-  .landing > h1 {
-    font-size: 12rem;
+  .landing h1 {
+    font-size: 6rem;
   }
-  .landing .button {
-    font-size: 1.25rem;
+  .landing h5 {
+    padding: 0 2.5%;
   }
-
+  .landing button[disabled], .landing button[disabled]:hover{
+    background-color: #eee;
+    border-color: #ccc;
+    color: #666;
+  }
   .landing pre {
     width: 30%;
     margin: 0 auto;
   }
-
 
 .container {
   padding: 4rem 0
@@ -67,7 +70,6 @@ aside {}
 .row > h6 {
   padding-top: 2rem;
   margin-bottom: .5rem;
-  font-size: 125%;
   font-weight: bold;
 }
 
@@ -83,11 +85,11 @@ aside {}
     margin: 0.5rem;
     min-width: 5rem;
     text-align: center;
-    height: 2rem;
-    line-height: 2rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
   }
   .box {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.75rem;
     font-size: 75%;
     border-radius: 2px;
     color: rgba(255,255,255,0.75);
