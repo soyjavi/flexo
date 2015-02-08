@@ -1,7 +1,7 @@
 {
   "name"        : "flexo",
   "description" : "A dead simple, responsive & flexible boilerplate.",
-  "version"     : "1.0.2",
+  "version"     : "1.0.3",
   "homepage"    : "http://getflexo.com",
   "authors"     : [
     "@soyjavi <javi@tapquo.com>"

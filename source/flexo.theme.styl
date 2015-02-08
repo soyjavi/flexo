@@ -3,7 +3,7 @@ COLOR                       = #001A33
 BACKGROUND                  = #f8f8f8
 THEME                       = #007FFF
 WHITE                       = #fff
-BORDER_RADIUS               = 4px
+BORDER_RADIUS               = .25rem
 
 // -- BASE ---------------------------------------------------------------------
 body
@@ -28,12 +28,15 @@ body
 
 // -- BUTTON -------------------------------------------------------------------
 .button, button, input[type="submit"], input[type="reset"], input[type="button"]
-  color                     : #555
-  border                    : 1px solid #bbb
+  font-weight               : bold
+  text-transform            : uppercase
+  letter-spacing            : .1rem
+  color                     : COLOR = darken(BACKGROUND, 50%)
+  border                    : 1px solid COLOR
   border-radius             : BORDER_RADIUS
   &:hover, &:focus
-    color                   : #333
-    border-color            : #888
+    color                   : darken(BACKGROUND, 75%)
+    border-color            : darken(BACKGROUND, 75%)
   &.primary
     color                   : WHITE
     background-color        : THEME
@@ -47,15 +50,15 @@ body
 input[type="email"], input[type="search"], input[type="text"], input[type="tel"],
 input[type="url"], input[type="password"], textarea, select
   background-color          : WHITE
-  border                    : 1px solid #D1D1D1
+  border                    : 1px solid darken(BACKGROUND, 15%)
   border-radius             : BORDER_RADIUS
-  & :focus
-    border                  : 1px solid #33C3F0
+  &:focus
+    border                  : 1px solid darken(BACKGROUND, 30%)
 
 // -- TABLE ---------------------------------------------------------------------
 table
   th, td
-    border-bottom           : 1px solid #E1E1E1
+    border-bottom           : 1px solid darken(BACKGROUND, 10%)
 
 // -- CODE ---------------------------------------------------------------------
 code
