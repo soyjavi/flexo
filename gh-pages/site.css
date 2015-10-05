@@ -25,6 +25,10 @@ aside {}
     aside a:hover {
       color: #fff;
     }
+    aside a.active {
+      color: #fff;
+      font-weight: bold;
+    }
   aside footer {
     font-size: 75%;
     background-color: rgba(255,255,255,0.025);
@@ -33,10 +37,12 @@ aside {}
       line-height: 2rem;
     }
     aside footer img {
-      height: 2rem;
-      width: 2rem;
+      height: 1.9rem;
+      width: 1.9rem;
       margin-right: .5rem;
       border-radius: 50%;
+      border: solid 1px #007FFF;
+      background-color: #007FFF;
     }
     aside footer a {
       margin-left: .5rem;

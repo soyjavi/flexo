@@ -1,7 +1,7 @@
 {
   "name"        : "flexo",
   "description" : "A dead simple, responsive & flexible boilerplate.",
-  "version"     : "1.0.3",
+  "version"     : "1.0.4",
   "homepage"    : "http://getflexo.com",
   "authors"     : [
     "@soyjavi <javi@tapquo.com>"
@@ -9,6 +9,9 @@
   "keywords"    : [ "responsive", "framework", "rwd", "desktop", "phone","tablet" ],
   "license"     : "MIT",
   "main"        : "flexo.css",
+  "dependencies": {
+    "jquery"      : "*"
+  },
   "repository"  : {
     "type"      : "git",
     "url"       : "git://github.com/soyjavi/flexo.git"

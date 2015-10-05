@@ -1,6 +1,6 @@
 {
   "name"        : "flexo",
-  "version"     : "1.0.3",
+  "version"     : "1.0.4",
   "description" : "A dead simple, responsive & flexible boilerplate.",
   "author"      : "Javi Jimenez <https://twitter.com/soyjavi>",
   "homepage"    : "http://getflexo.com",
@@ -10,6 +10,8 @@
   },
   "devDependencies" : {
     "gulp"        : "*",
+    "gulp-coffee" : "*",
+    "gulp-uglify" : "*",
     "gulp-concat" : "*",
     "gulp-connect": "*",
     "gulp-header" : "*",
